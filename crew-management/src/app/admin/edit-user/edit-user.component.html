@@ -1,1 +1,14 @@
 <p> component loaded from lazy load module </p>
+
+{{adminName}}
+<a [href]="anchroUrl" > git link</a>
+<button [disabled] ="disabled"> show button </button>
+
+<div [class]="className"> This is div</div>
+<button (click)="buttonClicked()">Click me..</button>
+
+<input type="text" (keyup)="captureValue($event)"/>
+
+<div (mouseover)="onMouseover($event)" (mouseout)="onMouseout($event)">
+    This is multiple events 
+</div>

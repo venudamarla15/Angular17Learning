@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AddUserComponent {
 
+  //uname = "Venu Damarla";
+  addToCart: number =0;
   // interpolation 
   userName: string = '';
   userId: number = 20;
@@ -26,6 +28,19 @@ export class AddUserComponent {
 
   getDiscountPrice() {
    return this.product.price -(this.product.price * 9.5/100)
+  }
+
+  // onNameChange(event: any){
+  //   //xxthis.uname = event.target.value;
+  // }
+  decrement(){
+    if(this.addToCart > 0){
+      this.addToCart --;
+    }
+  }
+  increment(){
+    if(this.addToCart <  this.product.instock)
+    this.addToCart ++;
   }
 
 }

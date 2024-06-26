@@ -1,1 +1,6 @@
-<p> component loaded from lazy load module </P>
+.c1{
+    background-color: orangered;
+}
+.c2{
+    background-color: aqua;
+}
