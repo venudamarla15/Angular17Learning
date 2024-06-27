@@ -1,0 +1,34 @@
+<div>
+    <p>add-user works!</p>
+<p>{{ userName }}</p>
+<p> {{  userName + ' ' + userId}}</p>
+
+<p>{{ userName? 'Hello Venu': 'Hello world'  }}</p>
+
+ 
+<p> Product-Name: </p>
+<p>Name: {{ name }}</p>
+<p>Price: ${{userId }}</p>
+<p>Available Color: {{ color }}</p>
+
+
+<p> Name: {{product.name }}</p>
+<p> Price: {{ '$' + product.price }}</p>
+<p> Color: {{product.color }}</p>
+<p>Discounted price: {{ product.price -(product.price * product.discount/100) }}</p>
+
+<!-- using a function in the string interpolation -->
+<img src= "/public/Asserts/image.png">
+<p style="color: blue;"> Name: {{product.name }}</p>
+<p style="color: blue;"> Price: {{ '$' + product.price }}</p>
+<p style="color: blue;"> Color: {{product.color }}</p>
+<p style="color: blue;"> Discounted price: {{ getDiscountPrice(). toFixed(2) }}</p>
+<p style="color: blue;"> {{ product.instock > 0 ? 'only' + product.instock + 'left': 'Not in Stock '}}</p>
+<button (click)="decrement()">-</button>
+<span>{{ addToCart }}</span>
+<button (click)="increment()">+</button>
+<!-- <button [disabled]="!(product.instock>0)">Buy Now</button> -->
+<!-- <input (input)="onNameChange($event)"> <br>
+<p>Name:{{uname}}</p> -->
+
+</div>
