@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { TwoWayComponent } from './two-way/two-way.component';
+import { searchUserComponent } from './admin/search-user/search-user.component';
 
 export const routes: Routes = [
     {
@@ -9,7 +11,16 @@ export const routes: Routes = [
     {
         path:'add-user',
         loadComponent: () => import('./admin/add-user/add-user.component').then( c=> c.AddUserComponent)
+    },
+    {
+        path: 'two-way',
+        component: TwoWayComponent
+    },
+    {
+        path: 'search-user',
+        component: searchUserComponent
     }
+    
 
 
 ];
