@@ -1,0 +1,48 @@
+<p>structural works!</p>
+
+<div *ngIf = "a>b">
+    A is grater 
+</div>
+<div *ngIf = "b > a">
+    B is grater 
+</div>
+
+@if(a >b){
+    {{a }} is grater than {{b}}
+}@else{
+    {{ b }}
+}
+<!-- @for(item of items; track item){
+    <div>{{items}}</div>
+}
+
+@for(items of test; track test){
+    <div> {{test }}</div>
+} -->
+<!-- <div *ngFor="let test of"> {{ test }}</div> -->
+
+@switch(userRole){
+    @case("admin"){
+        <p>user is admin </p>
+    }
+    @case("manager"){
+        <p>user is manager</p>
+    }
+    @default{
+        <p>Default user</p>
+    }
+}
+
+<div [ngClass]="{'active':isActive, 'inactive':!isActive}">
+    This section show/hide when button clicked..
+</div>
+<button (click)="toggle()">Toggle active</button>
+
+<!-- <button ">Style Update</button>
+<button ">Style Update</button> -->
+<div [ngStyle]="{'height':'140px','background-color':backgroundColor, 'font-size':fontSize}">
+    This the ngstyle directive example 
+</div>
+
+<button (click)="updateStyle()">Style Update</button>
+
